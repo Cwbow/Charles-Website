@@ -6,6 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charles' Site</title>
     <link rel="stylesheet" href="styles.css">
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create two equal columns next to each other */
+    .column-1 {
+      width: 50%;
+    }
+    .column-2 {
+      width: 50%;
+    }
+    .row {
+    width:100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other*/
+    @media screen and (max-width: 600px) {
+      .column-1 {
+        width: 100%;
+      }
+      .column-2 {
+        width: 100%;
+      }
+    }
+</style>
 </head>
 <body>
     <h1>Welcome to my BI Site</h1>
@@ -13,12 +41,22 @@
     <p>Welcome to my place of showing you analytics,
         come back soon to see what changes I make.</p>
 
+        <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/modules/series-label.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
         <script src="https://code.highcharts.com/modules/export-data.js"></script>
         <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <script src="https://code.highcharts.com/modules/funnel.js"></script>
         
+<!-- Column 1 --> 
+<section class="row">
+    <div class="column-1" style="background-color:#FFFFFF;">
         <!-- Basic Line Chart -->
         <figure class="highcharts-figure">
             <div id="linecontainer"></div>
@@ -29,7 +67,8 @@
             </p>
             <script src="line.js"></script>
         </figure>
-        
+    </div>
+    <div class="column-1" style="background-color:#FFFFFF;">
         <!-- Stacked Area Chart -->
         <figure class="highcharts-figure">
             <div id="areacontainer" style="border: 2px solid red;"></div>
@@ -40,7 +79,8 @@
             </p>
             <script src="area.js"></script>
         </figure>
-        
+    </div>
+    <div class="column-1" style="background-color:#FFFFFF;">
         <!-- Negative Column Chart -->
         <figure class="highcharts-figure">
             <div id="negcolumncontainer"></div>
@@ -51,7 +91,8 @@
             </p>
             <script src="negcolumn.js"></script>
         </figure>
-
+    </div>
+    <div class="column-1" style="background-color:#FFFFFF;">
         <!-- Pie Drill Down Chart -->
         <figure class="highcharts-figure">
             <div id="piecontainer"></div>
@@ -61,7 +102,12 @@
             </p>
             <script src="pie.js"></script>
         </figure>
-        
+    </div>
+</section>
+
+<!-- Column 2 -->
+<section class="row">
+    <div class="column-2" style="background-color:#FFFFFF;">
         <!-- Spiderweb Chart -->
         <figure class="highcharts-figure">
             <div id="spidercontainer"></div>
@@ -72,7 +118,8 @@
             </p>
             <script src="spider.js"></script>
         </figure>
-
+    </div>
+    <div class="column-2" style="background-color:#FFFFFF;">
         <!-- Gauge Chart -->
         <figure class="highcharts-figure">
             <div id="gaugecontainer"></div>
@@ -82,7 +129,8 @@
             </p>
             <script src="gauge.js"></script>
         </figure>
-
+    </div>
+    <div class="column-2" style="background-color:#FFFFFF;">
         <!-- Map Color Axis and Data Labels Chart -->
         <figure class="highcharts-figure">
         <div id="mapcontainer"></div>
@@ -91,5 +139,19 @@
         </p>
         <script src="map.js"></script>
         </figure>
+    </div>
+    <div class="column-2" style="background-color:#FFFFFF;">
+        <!-- Funnel Chart -->
+        <figure class="highcharts-figure">
+            <div id="funnelcontainer"></div>
+            <p class="highcharts-description">
+                Chart showing a sales funnel. A funnel chart is often used to visualize
+                data from stages of a process. Readers can quickly identify bottlenecks
+                in the process by comparing the area size variation of each stage.
+            </p>
+            <script src="funnel.js"></script>
+        </figure>
+    </div>
+</section>
 </body>
 </html>

@@ -1,10 +1,10 @@
 (async () => {
 
     const topology = await fetch(
-        'https://code.highcharts.com/mapdata/countries/us/us-all.topo.json'
+        'https://code.highcharts.com/mapdata/countries/us/us-all.t`opo.json'
     ).then(response => response.json());
 
-    Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/us-population-density.json', function (data) {
+    Highcharts.getJSON('http://www.highcharts.com/samples/data/us-population-density.json', function (data) {
 
         // Make codes uppercase to match the map data
         data.forEach(function (p) {
