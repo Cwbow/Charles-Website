@@ -1,7 +1,7 @@
 (async () => {
 
     const topology = await fetch(
-        'https://code.highcharts.com/mapdata/countries/us/us-all.t`opo.json'
+        'https://code.highcharts.com/mapdata/countries/us/us-all.topo.json'
     ).then(response => response.json());
 
     Highcharts.getJSON('http://www.highcharts.com/samples/data/us-population-density.json', function (data) {
